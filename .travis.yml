@@ -5,6 +5,8 @@ services:
 before_install:
   - docker build -t ozharov/docker-react -f Dockerfile.dev .
 
+# this is test
 script:
   - docker run ozharov/docker-react npm run test -- --coverage
+  - echo End of work
   
