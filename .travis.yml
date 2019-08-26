@@ -5,6 +5,10 @@ services:
 before_install:
   - docker build -t ozharov/docker-react -f Dockerfile.dev .
 
+### --Coverage doesn't work, use ENV instead
+### https://stackoverflow.com/questions/55991641/npm-test-coverage-never-exits
+
 script:
   - docker run -e CI=true ozharov/docker-react npm run test
+
   
